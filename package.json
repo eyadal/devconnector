@@ -16,5 +16,15 @@
   "bugs": {
     "url": "https://github.com/eyadal/devconnector/issues"
   },
-  "homepage": "https://github.com/eyadal/devconnector#readme"
+  "homepage": "https://github.com/eyadal/devconnector#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "config": "^3.1.0",
+    "express": "^4.17.1",
+    "express-validator": "^5.3.1",
+    "gravatar": "^1.8.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.0",
+    "request": "^2.88.0"
+  }
 }
