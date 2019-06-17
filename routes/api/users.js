@@ -49,6 +49,8 @@ router.post(
         password
       });
 
+      const salt = await bcrypt.genSalt(10);
+
       // Encrypt password
 
       // Return jsonwebtoken
