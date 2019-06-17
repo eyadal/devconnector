@@ -59,10 +59,11 @@ router.post(
 
       await user.save();
 
-      // Encrypt password
-
-      // Return jsonwebtoken
-      res.send('User registered');
+      const payload = {
+        user: {
+          id: user.id
+        }
+      };
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server error');
