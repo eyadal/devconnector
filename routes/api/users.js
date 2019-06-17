@@ -41,6 +41,13 @@ router.post(
         d: 'mm'
       });
 
+      user = new User({
+        name,
+        email,
+        avatar,
+        password
+      });
+
       // Encrypt password
 
       // Return jsonwebtoken
