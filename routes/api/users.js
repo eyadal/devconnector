@@ -19,7 +19,7 @@ router.post(
       'Please enter a password with 6 or more characters'
     ).isLength({ min: 6 })
   ],
-  (req, res) => {
+  async (req, res) => {
     const errors = validationResult(req);
 
     if (!errors.isEmpty()) {
@@ -28,15 +28,22 @@ router.post(
 
     const { name, email, password } = req.body;
 
-    // See if User exists
+    try {
+      let user = await User.findOne({ email });
+      if (user) {
+        res.status(400).json({ errors: [{ msg: 'User already exists' }] });
+      }
 
-    // Get Users gravatar
+      // Get Users gravatar
 
-    // Encrypt password
+      // Encrypt password
 
-    // Return jsonwebtoken
-
-    res.send('User route');
+      // Return jsonwebtoken
+      res.send('User route');
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server error');
+    }
   }
 );
 
