@@ -58,7 +58,7 @@ router.post(
       // Encrypt password
 
       // Return jsonwebtoken
-      res.send('User route');
+      res.send('User registered');
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server error');
