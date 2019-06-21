@@ -1,6 +1,9 @@
 const express = require('express');
 const router = express.Router();
 const auth = require('../../middleware/auth');
+const jwt = require('jsonwebtoken');
+const config = require('config');
+const { check, validationResult } = require('express-validator/check');
 
 const User = require('../../models/User');
 
@@ -18,7 +21,7 @@ router.get('/', auth, async (req, res) => {
 });
 
 // @route       POST api/auth
-// description  Authenicate user & get token
+// description  Authenticate user & get token
 // access       Public
 router.post(
   '/',
