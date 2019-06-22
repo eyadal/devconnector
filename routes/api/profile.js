@@ -65,6 +65,8 @@ router.post(
     } = req.body;
 
     // Build profile obejct
+    const profileFields = {};
+    profileFields.user = req.user.id;
   }
 );
 
