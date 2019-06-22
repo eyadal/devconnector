@@ -84,6 +84,12 @@ router.post(
     if (facebook) profileFields.social.facebook = facebook;
     if (linkedin) profileFields.social.linkedin = linkedin;
     if (instagram) profileFields.social.instagram = instagram;
+
+    try {
+    } catch (err) {
+      console.error(err.message);
+      res.status(400).send('Server Error');
+    }
   }
 );
 
