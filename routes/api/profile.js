@@ -98,6 +98,12 @@ router.post(
 
         return res.json(profile);
       }
+
+      //Create
+      profile = new Profile(profileFields);
+
+      await Profile.save();
+      res.json(profile);
     } catch (err) {
       console.error(err.message);
       res.status(400).send('Server Error');
