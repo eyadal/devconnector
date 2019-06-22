@@ -43,7 +43,7 @@ router.post(
         .isEmpty()
     ]
   ],
-  (req, res) => {}
+  async (req, res) => {}
 );
 
 module.exports = router;
