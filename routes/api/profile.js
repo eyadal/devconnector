@@ -43,7 +43,9 @@ router.post(
         .isEmpty()
     ]
   ],
-  async (req, res) => {}
+  async (req, res) => {
+    const errors = validationResult(req);
+  }
 );
 
 module.exports = router;
