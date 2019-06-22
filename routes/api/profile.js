@@ -86,6 +86,7 @@ router.post(
     if (instagram) profileFields.social.instagram = instagram;
 
     try {
+      let profile = Profile.findOne({ user: req.user.id });
     } catch (err) {
       console.error(err.message);
       res.status(400).send('Server Error');
