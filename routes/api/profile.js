@@ -10,6 +10,10 @@ const User = require('../../models/User');
 // access       Private
 router.get('/', auth, async (req, res) => {
   try {
+    const profile = await Profile.findOne({ user: req.user.id }).populate(
+      'user',
+      ['name', 'avatar']
+    );
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
