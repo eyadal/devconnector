@@ -87,6 +87,10 @@ router.post(
 
     try {
       let profile = Profile.findOne({ user: req.user.id });
+
+      if (profile) {
+        //update
+      }
     } catch (err) {
       console.error(err.message);
       res.status(400).send('Server Error');
