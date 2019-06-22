@@ -1,9 +1,9 @@
-const mongoose = require ('mongoose');
+const mongoose = require('mongoose');
 
 const ProfileSchema = new mongoose.Schema({
   user: {
     type: mongoose.Schema.Types.ObjectId,
-    ref:'user'
+    ref: 'user'
   },
   company: {
     type: String
@@ -15,7 +15,7 @@ const ProfileSchema = new mongoose.Schema({
     type: String
   },
   status: {
-    type: String
+    type: String,
     required: true
   },
   skills: {
@@ -39,7 +39,7 @@ const ProfileSchema = new mongoose.Schema({
         required: true
       },
       location: {
-        type: String,
+        type: String
       },
       from: {
         type: Date,
@@ -64,7 +64,7 @@ const ProfileSchema = new mongoose.Schema({
         required: true
       },
       degree: {
-        type: String, 
+        type: String,
         required: true
       },
       fieldofstudy: {
