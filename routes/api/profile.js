@@ -27,8 +27,20 @@ router.get('/me', auth, async (req, res) => {
   }
 });
 
-// @route       GET api/profile/me
-// description  Get current users profile
+// @route       POST api/profile
+// description  Create or update user profile
 // access       Private
+router.post(
+  '/',
+  [
+    auth,
+    [
+      check('status', 'status is required')
+        .not()
+        .isEmpty()
+    ]
+  ],
+  (req, res) => {}
+);
 
 module.exports = router;
