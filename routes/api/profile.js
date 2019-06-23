@@ -211,6 +211,8 @@ router.put(
 
     try {
       const profile = await Profile.findOne({ user: req.user.id });
+
+      profile.experience.unshift(newExp);
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server Error');
