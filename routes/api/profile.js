@@ -206,7 +206,7 @@ router.put(
       from,
       to,
       current,
-      descreption
+      description
     };
 
     try {
