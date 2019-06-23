@@ -198,6 +198,16 @@ router.put(
       current,
       description
     } = req.body;
+
+    const newExp = {
+      title,
+      company,
+      location,
+      from,
+      to,
+      current,
+      descreption
+    };
   }
 );
 
