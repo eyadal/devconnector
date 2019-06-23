@@ -111,4 +111,9 @@ router.post(
   }
 );
 
+// @route       GET api/profile
+// description  Get all profiles
+// access       Public
+router.get('/', async (req, res) => {});
+
 module.exports = router;
