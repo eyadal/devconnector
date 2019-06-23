@@ -234,6 +234,8 @@ router.delete('/experience/:exp_id', auth, async (req, res) => {
     const removeIndex = profile.experience
       .map(item => item.id)
       .indexOf(req.params.exp_id);
+
+    profile.experience.splice(removeIndex, 1);
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
