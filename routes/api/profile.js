@@ -183,7 +183,9 @@ router.put(
         .isEmpty()
     ]
   ],
-  async (req, res) => {}
+  async (req, res) => {
+    const errors = validationResult(req);
+  }
 );
 
 module.exports = router;
