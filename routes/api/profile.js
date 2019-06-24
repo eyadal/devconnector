@@ -344,6 +344,8 @@ router.get('/github/:username', (reg, res) => {
       method: 'GET',
       headers: { 'user-agent': 'node.js' }
     };
+
+    request();
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
