@@ -273,9 +273,9 @@ router.put(
     }
 
     const {
-      title,
-      company,
-      location,
+      school,
+      degree,
+      fieldofstudy,
       from,
       to,
       current,
@@ -283,9 +283,9 @@ router.put(
     } = req.body;
 
     const newEdu = {
-      title,
-      company,
-      location,
+      school,
+      degree,
+      fieldofstudy,
       from,
       to,
       current,
