@@ -333,7 +333,7 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
 // @route       Get api/profile/github/:username
 // description  Get user repos from Github
 // access       Public
-router.get('/github/:username', (reg, res) => {
+router.get('/github/:username', (req, res) => {
   try {
     const options = {
       uri: `http://api.github.com/users/${
@@ -351,6 +351,8 @@ router.get('/github/:username', (reg, res) => {
       if (response.statusCode !== 200) {
         res.status(404).json({ msg: 'No Github profile found' });
       }
+
+      res.json(JSON.parse(body));
     });
   } catch (err) {
     console.error(err.message);
