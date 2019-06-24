@@ -1,6 +1,9 @@
 const express = require('express');
+const request = require('request');
+const config = require('config');
 const router = express.Router();
 const auth = require('../../middleware/auth');
+
 const { check, validationResult } = require('express-validator/check');
 
 const Profile = require('../../models/Profile');
@@ -332,6 +335,9 @@ router.delete('/education/:edu_id', auth, async (req, res) => {
 // access       Public
 router.get('/github/:username', (reg, res) => {
   try {
+    const options = {
+      uri: ``
+    };
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
