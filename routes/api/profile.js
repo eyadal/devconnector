@@ -340,7 +340,8 @@ router.get('/github/:username', (reg, res) => {
         req.params.username
       }/repos?per_page=5&sort=created:asc&client_id=${config.get(
         'githubClientId'
-      )}&client_secret=${config.get('githubSecret')}`
+      )}&client_secret=${config.get('githubSecret')}`,
+      method: 'GET'
     };
   } catch (err) {
     console.error(err.message);
