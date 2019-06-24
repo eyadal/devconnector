@@ -223,7 +223,7 @@ router.put(
   }
 );
 
-// @route       DELETE api/profile/experience/:exp_id
+// @route       DELETE api/profile/experience/:edu_id
 // description  Delete experience from profile
 // access       Private
 router.delete('/experience/:exp_id', auth, async (req, res) => {
@@ -306,7 +306,7 @@ router.put(
   }
 );
 
-// @route       DELETE api/profile/education/:exp_id
+// @route       DELETE api/profile/education/:edu_id
 // description  Delete education from profile
 // access       Private
 router.delete('/education/:exp_id', auth, async (req, res) => {
