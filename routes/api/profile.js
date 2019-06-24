@@ -252,10 +252,13 @@ router.put(
   [
     auth,
     [
-      check('title', 'Title is required')
+      check('school', 'School is required')
         .not()
         .isEmpty(),
-      check('company', 'Company is required')
+      check('degree', 'Degree is required')
+        .not()
+        .isEmpty(),
+      check('fieldofstudy', 'FiledOfStudy date is required')
         .not()
         .isEmpty(),
       check('from', 'From date is required')
@@ -303,15 +306,15 @@ router.put(
   }
 );
 
-// @route       DELETE api/profile/experience/:exp_id
-// description  Delete experience from profile
+// @route       DELETE api/profile/education/:exp_id
+// description  Delete education from profile
 // access       Private
 router.delete('/education/:exp_id', auth, async (req, res) => {
   try {
     const profile = await Profile.findOne({ user: req.user.id });
 
     // Get remove index
-    const removeIndex = profile.experience
+    const removeIndex = profile.education
       .map(item => item.id)
       .indexOf(req.params.exp_id);
 
