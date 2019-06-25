@@ -35,6 +35,9 @@ router.post(
         avatar: user.avatar,
         user: req.user.id
       };
+
+      const post = await newPost.save();
+      res.json(post);
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server Error');
