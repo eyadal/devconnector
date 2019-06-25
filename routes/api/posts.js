@@ -26,6 +26,13 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
     const user = await User.findById(req.user.id).select('-password');
+
+    const newPost = {
+      text: req.body.text,
+      name: user.name,
+      avatar: user.avatar,
+      user: req.user.id
+    };
   }
 );
 
