@@ -106,4 +106,9 @@ router.delete('/:id', auth, async (req, res) => {
   }
 });
 
+// @route       PUT api/posts//like/:id
+// description  Like a post
+// access       Private
+router.put('/like/:id', auth, async (req, res) => {});
+
 module.exports = router;
