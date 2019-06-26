@@ -222,6 +222,16 @@ router.delete('comment/:id/comment_id', auth, async (req, res) => {
     if (comment.user.toString() !== req.user.id) {
       return res.status(401).json({ msg: 'User not authorized' });
     }
+    // Get remove index
+    const removeIndex = post.comments
+      .map(comment => comment.user.toString())
+      .indexOf(req.user.id);
+
+    post.comments.splice(removeIndex, 1);
+
+    await post.save();
+
+    res.json(post.comments);
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Server Error');
