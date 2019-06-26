@@ -109,6 +109,12 @@ router.delete('/:id', auth, async (req, res) => {
 // @route       PUT api/posts//like/:id
 // description  Like a post
 // access       Private
-router.put('/like/:id', auth, async (req, res) => {});
+router.put('/like/:id', auth, async (req, res) => {
+  try {
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Status Error');
+  }
+});
 
 module.exports = router;
