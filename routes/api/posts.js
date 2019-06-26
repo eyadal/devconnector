@@ -58,4 +58,17 @@ router.get('/', auth, async (req, res) => {
   }
 });
 
+// @route       GET api/posts/:id
+// description  Get post by ID
+// access       Private
+router.get('/:id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    res.json(post);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
