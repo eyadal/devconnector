@@ -85,6 +85,11 @@ router.get('/:id', auth, async (req, res) => {
 router.delete('/:id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
+
+    // Check user
+    if (post.user.toString() !== req.user.id) {
+    }
+
     res.json(posts);
   } catch (err) {
     console.error(err.message);
