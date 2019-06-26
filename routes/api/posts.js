@@ -121,6 +121,7 @@ router.put('/like/:id', auth, async (req, res) => {
     }
 
     post.likes.unshift({ user: req.user.id });
+    await post.save();
   } catch (err) {
     console.error(err.message);
     res.status(500).send('Status Error');
