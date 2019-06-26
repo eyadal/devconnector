@@ -79,4 +79,17 @@ router.get('/:id', auth, async (req, res) => {
   }
 });
 
+// @route       DELETE api/posts/:id
+// description  Delete post by ID
+// access       Private
+router.delete('/:id', auth, async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    res.json(posts);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
+
 module.exports = router;
