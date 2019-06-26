@@ -201,4 +201,9 @@ router.post(
   }
 );
 
+// @route       DELETE api/posts/comment/:id/comment_id
+// description  Delete a comment
+// access       Private
+router.delete('comment/:id/comment_id', auth, async (req, res) => {});
+
 module.exports = router;
