@@ -23,6 +23,14 @@ const Register = () => {
         email,
         password
       };
+
+      try {
+        const config = {
+          headers: {
+            'Content-Type': ' application/json'
+          }
+        };
+      } catch (err) {}
     }
   };
 
