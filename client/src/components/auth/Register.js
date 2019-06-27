@@ -1,5 +1,4 @@
 import React, { Fragment, useState } from 'react';
-import axios from 'axios';
 
 const Register = () => {
   const [formData, setFormData] = useState({
