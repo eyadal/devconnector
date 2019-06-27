@@ -29,7 +29,8 @@ const Register = () => {
           headers: {
             'Content-Type': ' application/json'
           }
-        };
+        }
+        const body = JSON.stringify(newUser):
       } catch (err) {}
     }
   };
