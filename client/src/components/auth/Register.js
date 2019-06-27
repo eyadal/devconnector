@@ -18,7 +18,14 @@ const Register = () => {
       </p>
       <form className='form' action='create-profile.html'>
         <div className='form-group'>
-          <input type='text' placeholder='Name' name='name' required />
+          <input
+            type='text'
+            placeholder='Name'
+            name='name'
+            value={name}
+            onChange={e => onChange(e)}
+            required
+          />
         </div>
         <div className='form-group'>
           <input type='email' placeholder='Email Address' name='email' />
