@@ -8,7 +8,7 @@ const App = () => (
   <Router>
     <Fragment>
       <Navbar />
-      <Landing />
+      <Route exact path='/' component={Landing} />
     </Fragment>
   </Router>
 );
