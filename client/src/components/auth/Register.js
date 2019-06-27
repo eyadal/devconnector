@@ -9,7 +9,8 @@ const Register = () => {
   });
 
   const { name, email, password, password2 } = formData;
-  const onChange = e => setFormData();
+  const onChange = e =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
 
   return (
     <Fragment>
