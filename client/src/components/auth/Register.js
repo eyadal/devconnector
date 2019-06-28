@@ -86,4 +86,7 @@ const Register = () => {
   );
 };
 
-export default connect()(Register);
+export default connect(
+  null,
+  { setAlert }
+)(Register);
