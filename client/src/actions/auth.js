@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { setAlert } from './alert';
 import { REGISTER_SUCCESS, REGISTER_FAIL } from './types';
 
 //Register User
