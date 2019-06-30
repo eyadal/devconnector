@@ -21,7 +21,11 @@ export const loadUser = () => async dispatch => {
       type: USER_LOADED,
       payload: res.data
     });
-  } catch (err) {}
+  } catch (err) {
+    dispatch({
+      type: AUTH_ERROR
+    });
+  }
 };
 
 //Register User
