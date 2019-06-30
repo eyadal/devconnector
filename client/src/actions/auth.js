@@ -7,6 +7,9 @@ import {
   AUTH_ERROR
 } from './types';
 
+// Load User
+export const loadUser = () => async dispatch => {};
+
 //Register User
 export const register = ({ name, email, password }) => async dispatch => {
   const config = {
