@@ -10,6 +10,7 @@ import { loadUser } from './actions/auth';
 // Redux
 import { Provider } from 'react-redux';
 import store from './store';
+import setAuthToken from './utils/setAuthToken';
 
 import './App.css';
 
