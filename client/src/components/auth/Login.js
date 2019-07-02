@@ -57,6 +57,10 @@ const Login = () => {
   );
 };
 
+Login.PropTypes = {
+  login: PropTypes.func.isRequired
+};
+
 export default connect(
   null,
   { login }
