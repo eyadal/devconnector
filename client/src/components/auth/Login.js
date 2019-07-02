@@ -57,4 +57,7 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default connect(
+  null,
+  { login }
+)(Login);
