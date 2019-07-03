@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -19,7 +19,7 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
   const guestLinks = (
     <ul>
       <li>
-        <Link to='/!#'>Developers</Link>
+        <Link to='/#!'>Developers</Link>
       </li>
       <li>
         <Link to='/register'>Register</Link>
@@ -37,6 +37,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <i className='fas fa-code' /> DevConnector
         </Link>
       </h1>
+      {!loading && (
+        <Fragment> {isAuthenticated ? authLinks : guestLinks} </Fragment>
+      )}
     </nav>
   );
 };
