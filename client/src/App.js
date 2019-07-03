@@ -6,6 +6,7 @@ import Register from './components/auth/Register';
 import Login from './components/auth/Login';
 import Alert from './components/layout/Alert';
 import { loadUser } from './actions/auth';
+import Dashboard from './components/dashboard/Dashboard';
 
 // Redux
 import { Provider } from 'react-redux';
