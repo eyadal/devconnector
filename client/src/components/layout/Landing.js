@@ -27,4 +27,4 @@ const Landing = () => {
   );
 };
 
-export default Landing;
+export default connect(mapStateToProps)(Landing);
