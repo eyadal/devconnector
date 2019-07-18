@@ -18,6 +18,8 @@ const CreateProfile = props => {
     instagram: ''
   });
 
+  const [displaySocialInputs, toggleSocialInputs] = useState(false);
+
   const {
     company,
     website,
