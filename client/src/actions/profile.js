@@ -18,3 +18,10 @@ export const getCurrentProfile = () => async dispatch => {
     });
   }
 };
+
+// Create or update a profile
+export const createProfile = (
+  formData,
+  history,
+  edit = false
+) => async dispatch => {};
