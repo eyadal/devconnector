@@ -24,4 +24,13 @@ export const createProfile = (
   formData,
   history,
   edit = false
-) => async dispatch => {};
+) => async dispatch => {
+  try {
+    const config = {
+      headers: {
+        'Content-Type': ' application/json'
+      }
+    };
+    const res = await axios.post('/api/profile', formData, config);
+  } catch (err) {}
+};
