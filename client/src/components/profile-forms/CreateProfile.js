@@ -218,7 +218,9 @@ const CreateProfile = props => {
   );
 };
 
-CreateProfile.propTypes = {};
+CreateProfile.propTypes = {
+  createProfile: PropTypes.func.isRequired
+};
 
 export default connect(
   null,
