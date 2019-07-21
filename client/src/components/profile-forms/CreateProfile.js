@@ -43,7 +43,7 @@ const CreateProfile = ({ createProfile, history }) => {
       [e.target.name]: e.target.value
     });
 
-  onSubmit = e => {
+  const onSubmit = e => {
     e.preventDefault();
     createProfile(formData, history);
   };
@@ -230,4 +230,4 @@ CreateProfile.propTypes = {
 export default connect(
   null,
   { createProfile }
-)(withRouter(CreateProfile);
+)(withRouter(CreateProfile));
