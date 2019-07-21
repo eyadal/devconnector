@@ -221,6 +221,6 @@ const CreateProfile = props => {
 CreateProfile.propTypes = {};
 
 export default connect(
-  mapStateToProps,
+  null,
   { createProfile }
 )(CreateProfile);
