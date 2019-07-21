@@ -220,4 +220,7 @@ const CreateProfile = props => {
 
 CreateProfile.propTypes = {};
 
-export default CreateProfile;
+export default connect(
+  mapStateToProps,
+  { createProfile }
+)(CreateProfile);
