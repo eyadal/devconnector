@@ -49,7 +49,7 @@ const CreateProfile = ({ createProfile, history }) => {
   };
 
   return (
-    <Fragment>
+    <Link>
       <h1 className='large text-primary'>Create Your Profile</h1>
       <p className='lead'>
         <i className='fas fa-user' /> Let's get some information to make your
@@ -215,11 +215,11 @@ const CreateProfile = ({ createProfile, history }) => {
         )}
 
         <input type='submit' className='btn btn-primary my-1' />
-        <a className='btn btn-light my-1' href='dashboard.html'>
+        <Link className='btn btn-light my-1' to='/dashboard'>
           Go Back
-        </a>
+        </Link>
       </form>
-    </Fragment>
+    </Link>
   );
 };
 
