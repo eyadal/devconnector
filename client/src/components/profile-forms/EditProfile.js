@@ -252,7 +252,7 @@ EditProfile.propTypes = {
   profile: PropTypes.object.isRequired
 };
 
-const mapStateToProps = (state = {
+const mapStateToProps = state => ({
   profile: state.profile
 });
 
