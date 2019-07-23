@@ -53,9 +53,9 @@ const Dashboard = ({
 
 Dashboard.propTypes = {
   getCurrentProfile: PropTypes.func.isRequired,
+  deleteAccount: PropTypes.func.isRequired,
   auth: PropTypes.object.isRequired,
-  profile: PropTypes.object.isRequired.experience,
-  deleteAccount: PropTypes.func.isRequired
+  profile: PropTypes.object.isRequired.experience
 };
 
 const mapStateToProps = state => ({
