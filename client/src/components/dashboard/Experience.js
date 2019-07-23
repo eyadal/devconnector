@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
+import Moment from 'react-moment';
+import { connect } from 'react-redux';
 
 const Experience = ({ experience }) => {
-  return <div />;
+  return (
+    <Fragment>
+      <h2 className='my-2'>Experience Credentials</h2>
+      <table className='table'>
+        <thead>
+          <tr>
+            <th>Company</th>
+            <th className='hide-sm'>Title</th>
+            <th className='hide-sm'>Yeasrs</th>
+            <th />
+          </tr>
+        </thead>
+      </table>
+    </Fragment>
+  );
 };
 
 Experience.propTypes = {};
