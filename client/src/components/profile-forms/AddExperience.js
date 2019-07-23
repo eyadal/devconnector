@@ -5,6 +5,22 @@ import { connect } from 'react-redux';
 import { addExperience } from '../../actions/profile';
 
 const AddExperience = props => {
+  const [formData, setFormData] = useState({
+    company: '',
+    title: '',
+    location: '',
+    from: '',
+    to: '',
+    current: false,
+    description: ''
+  });
+
+  const [toDateDisabled, toggleDisabled] = useState(false);
+  const { company, title, location, from, to, current, description } = formData;
+
+  const onChange = e =>
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+
   return (
     <Fragment>
       <h1 class='large text-primary'>Add An Experience</h1>
