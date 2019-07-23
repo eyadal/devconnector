@@ -53,3 +53,6 @@ export const createProfile = (
     });
   }
 };
+
+// Add Experience
+export const addExperience = (formData, history) => async dispatch => {};
