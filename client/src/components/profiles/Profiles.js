@@ -10,4 +10,8 @@ const Profiles = props => {
 
 Profiles.propTypes = {};
 
-export default Profiles;
+const mapStateToProps = state => ({
+  profile: state.profile
+});
+
+export default connnect(mapStateToProps, { getProfiles })(Profiles);
