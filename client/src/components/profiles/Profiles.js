@@ -4,7 +4,7 @@ import { connecct } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import { getProfiles } from '../../actions/profile';
 
-const Profiles = props => {
+const Profiles = ({ getProfiles, profile: { profiles, loading } }) => {
   return <div />;
 };
 
