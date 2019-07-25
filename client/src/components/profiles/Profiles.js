@@ -8,7 +8,10 @@ const Profiles = props => {
   return <div />;
 };
 
-Profiles.propTypes = {};
+Profiles.propTypes = {
+  getProfiles: PropTypes.func.isRequired,
+  profile: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => ({
   profile: state.profile
