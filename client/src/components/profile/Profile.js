@@ -6,7 +6,7 @@ import { getProfileById } from '../../actions/profile';
 
 const Profile = ({
   getProfileById,
-  profile: { profile, loding },
+  profile: { profile, loading },
   auth,
   match
 }) => {
