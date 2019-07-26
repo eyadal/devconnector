@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 const ProfileAbout = ({
@@ -9,6 +9,7 @@ const ProfileAbout = ({
   }
 }) => {
   <div class='profile-about bg-light p-2'>
+    {bio && <Fragment />}
     <h2 class='text-primary'>{name}</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed doloremque
