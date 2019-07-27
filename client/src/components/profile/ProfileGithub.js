@@ -4,10 +4,21 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import { getGithubRepos } from '../../actions/profile';
 
-const ProfileGithub = props => {
+const ProfileGithub = ({ username, getGithubRepos, repos }) => {
   return <div />;
 };
 
-ProfileGithub.propTypes = {};
+ProfileGithub.propTypes = {
+  getGithubRepos: PropTypes.func.isRequired,
+  repos: PropTypes.array.isRequired,
+  username: PropTypes.string.isRequired
+};
 
-export default ProfileGithub;
+const mapStateToProps = state => ({
+  repos: state.profile.repos
+});
+
+export default connect(
+  mapStateToProps,
+  { getGithubRepos }
+)(ProfileGithub);
