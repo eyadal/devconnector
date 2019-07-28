@@ -90,7 +90,7 @@ export const addPost = formData => async dispatch => {
 
     dispatch({
       type: ADD_POST,
-      payload: readdirSync.data
+      payload: res.data
     });
 
     dispatch(setAlert('Post Created', 'success'));
