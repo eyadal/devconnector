@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Spinner from '../layout/Spinner';
 import { getPosts } from '../../actions/post';
 
-const Post = props => {
+const Post = ({ getPost, post: { post, loading } }) => {
   return <div />;
 };
 
