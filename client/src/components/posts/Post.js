@@ -8,7 +8,10 @@ const Post = props => {
   return <div />;
 };
 
-Post.propTypes = {};
+Post.propTypes = {
+  getPosts: PropTypes.func.isRequired,
+  post: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => ({
   post: state.post
