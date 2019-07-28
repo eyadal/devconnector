@@ -22,6 +22,9 @@ const Navbar = ({ auth: { isAuthenticated, loading }, logout }) => {
           <span className='hide-sm'>Logout</span>
         </a>
       </li>
+      <li>
+        <Link to='/posts'>Posts</Link>
+      </li>
     </ul>
   );
 
