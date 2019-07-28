@@ -24,4 +24,6 @@ switch (type) {
       error: payload,
       loading: false
     };
+  default:
+    return state;
 }
