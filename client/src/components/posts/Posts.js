@@ -11,7 +11,7 @@ const Posts = ({ getPosts, post: { posts, loading } }) => {
   return <div />;
 };
 
-Post.propTypes = {
+Posts.propTypes = {
   getPosts: PropTypes.func.isRequired,
   post: PropTypes.object.isRequired
 };
