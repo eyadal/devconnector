@@ -18,4 +18,10 @@ switch (type) {
       posts: payload,
       loading: false
     };
+  case POST_ERROR:
+    return {
+      ...state,
+      error: payload,
+      loading: false
+    };
 }
