@@ -5,6 +5,9 @@ import Spinner from '../../components/layout/Spinner';
 import { getPost } from '../../actions/post';
 
 const Post = ({ getPost, post: { post, loading }, match }) => {
+  useEffekt(() => {
+    getPost(match.params.id);
+  }, [getPost]);
   return <div />;
 };
 
