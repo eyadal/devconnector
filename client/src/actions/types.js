@@ -17,3 +17,4 @@ export const CLEAR_PROFILE = 'CLEAR_PROFILE';
 export const PROFILE_ERROR = 'PROFILE_ERROR';
 export const ACCOUNT_DELETED = 'ACCOUNT_DELETED';
 export const UPDATE_LIKES = 'UPDATE_LIKES';
+export const DELETE_POST = 'DELETE_POST';
