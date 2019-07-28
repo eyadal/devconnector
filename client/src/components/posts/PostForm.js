@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import { addPost } from '../../actions/post';
 
 const PostForm = ({ addPost }) => {
+  const [text, setText] = useState('');
   return <div />;
 };
 
