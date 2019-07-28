@@ -24,11 +24,15 @@ const PostItem = ({
         <p class='post-date'>
           Posted on <Moment format='YYYY/MM/DD'>{date}</Moment>
         </p>
-        <button type='button' class='btn btn-light'>
+        <button onClick={e => addLike(_id)} type='button' class='btn btn-light'>
           <i class='fas fa-thumbs-up' />{' '}
           <span>{likes.length > 0 && <span>{likes.length}</span>}</span>
         </button>
-        <button type='button' class='btn btn-light'>
+        <button
+          onClick={e => removeLike(_id)}
+          type='button'
+          class='btn btn-light'
+        >
           <i class='fas fa-thumbs-down' />
         </button>
         <Link to={`/post/${_id}`} class='btn btn-primary'>
