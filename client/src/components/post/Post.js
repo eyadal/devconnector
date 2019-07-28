@@ -8,7 +8,8 @@ const Post = ({ getPost, post: { post, loading }, match }) => {
   useEffekt(() => {
     getPost(match.params.id);
   }, [getPost]);
-  return <div />;
+  return;
+  <div>post</div>;
 };
 
 Post.propTypes = {
