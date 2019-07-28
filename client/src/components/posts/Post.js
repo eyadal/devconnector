@@ -10,4 +10,11 @@ const Post = props => {
 
 Post.propTypes = {};
 
-export default Post;
+const mapStateToProps = state => ({
+  post: state.post
+});
+
+export default connect(
+  mapStateToProps,
+  { getPosts }
+)(Post);
