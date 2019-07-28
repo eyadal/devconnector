@@ -5,7 +5,8 @@ import {
   POST_ERROR,
   UPDATE_LIKES,
   DELETE_POST,
-  ADD_POST
+  ADD_POST,
+  GET_POST
 } from './types';
 
 // Get Posts
