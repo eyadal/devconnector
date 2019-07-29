@@ -1,0 +1,6 @@
+{
+  "mongoURI": "mongodb+srv://eyad:oneplus5@devconnector-qruv5.mongodb.net/test?retryWrites=true&w=majority",
+  "jwtSecret": "mysecrettoken",
+  "githubClientId": "7e9b7e63841b5569d47a",
+  "githubSecret": "c24add27ddcf44f71230b5912061b4f5cb8fff3b"
+}
