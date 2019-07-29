@@ -30,7 +30,8 @@ const CommentItem = ({
 CommentItem.propTypes = {
   postId: PropTypes.number.isRequired,
   comment: PropTypes.object.isRequired,
-  auth: PropTypes.object.isRequired
+  auth: PropTypes.object.isRequired,
+  deleteComment: PropTypes.func.isRequired
 };
 
 const mapStateToProps = state => ({
