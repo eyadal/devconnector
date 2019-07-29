@@ -94,7 +94,7 @@ const CreateProfile = ({ createProfile, history }) => {
             onChange={e => onChange(e)}
           />
           <small className='form-text'>
-            Could be your own or a company website
+            Could be your own or a company website!
           </small>
         </div>
         <div className='form-group'>
