@@ -63,6 +63,10 @@ const PostItem = ({
   </div>
 );
 
+PostItem.defaultProps = {
+  showActions: true
+};
+
 PostItem.propTypes = {
   post: PropTypes.object.isRequired,
   auth: PropTypes.object.isRequired,
