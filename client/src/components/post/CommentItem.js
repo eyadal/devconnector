@@ -5,11 +5,23 @@ import { connect } from 'react-redux';
 
 const CommentItem = ({
   postId,
-  comment: { _id, text, name, avatar, user, date }
+  comment: { _id, text, name, avatar, user, date },
+  auth
 }) => {
   return <div />;
 };
 
-CommentItem.propTypes = {};
+CommentItem.propTypes = {
+  postId: PropTypes.number.isRequired,
+  comment: PropTypes.object.isRequired,
+  auth: PropTypes.object.isRequired
+};
 
-export default CommentItem;
+const mapStateToProps = state({
+  auth: state.auth
+});
+
+export default connect(
+  mapStateToProps,
+  { CommentItem }
+)(CommentItem);
